@@ -58,7 +58,7 @@ async function run() {
       const user = req.body;
 
       const token = jwt.sign(user, process.env.JWT_SECRET, {
-        expiresIn: "10d",
+        expiresIn: "7d",
       });
 
       res.send({
