@@ -28,8 +28,8 @@ const userRoute = (adminCollection) => {
 
   // get admin list
   router.get("/api/user/get-user-list/:email", verifyJWT, async (req, res) => {
-    const getAdmin = adminCollection.find();
-    const result = await getAdmin.toArray();
+    const getUser = adminCollection.find();
+    const result = await getUser.toArray();
     res.status(200).send({
       status: 200,
       list_data: result,
@@ -38,8 +38,8 @@ const userRoute = (adminCollection) => {
   });
   // get all admin
   router.get("/api/admin/get-admin-list/", verifyJWT, async (req, res) => {
-    const getAdmin = adminCollection.find();
-    const result = await getAdmin.toArray();
+    const getUser = adminCollection.find();
+    const result = await getUser.toArray();
     res.status(200).send({
       status: 200,
       list_data: result,

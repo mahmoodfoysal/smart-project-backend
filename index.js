@@ -72,7 +72,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("Smart project server running...!");
+  res.send(`Smart project server running at port ${port}`);
 });
 
 app.listen(port, () => {
